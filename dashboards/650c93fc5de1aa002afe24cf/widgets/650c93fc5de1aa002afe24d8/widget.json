@@ -1,0 +1,205 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c93fc5de1aa002afe24cf",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "lastOpened": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "jaql": {
+                            "column": "Age Range",
+                            "datatype": "text",
+                            "dim": "[Commerce.Age Range]",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Age Range"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                        },
+                        "jaql": {
+                            "column": "Category",
+                            "datatype": "text",
+                            "dim": "[Category.Category]",
+                            "merged": true,
+                            "table": "category",
+                            "title": "Category"
+                        }
+                    }
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "isdefault": true
+                            }
+                        },
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Category",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaECommerce",
+                                "fullname": "LocalHost/Sample ECommerce",
+                                "id": "localhost_aSampleIAAaECommerce",
+                                "title": "Sample ECommerce"
+                            },
+                            "datatype": "text",
+                            "dim": "[Category.Category]",
+                            "filter": {
+                                "by": {
+                                    "agg": "sum",
+                                    "column": "Revenue",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Revenue]",
+                                    "table": "Commerce",
+                                    "title": "Total Revenue"
+                                },
+                                "top": 3
+                            },
+                            "merged": true,
+                            "table": "category",
+                            "title": "Category"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "650c93fc5de1aa002afe24d8",
+    "options": {
+        "dashboardFiltersMode": "filter",
+        "maxCharsPerLabelXAxis": 9,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "AGE RANGE"
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "intervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "intervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "SALES"
+            }
+        }
+    },
+    "subtype": "bar/stacked",
+    "title": "TOP 3 CATEGORIES BY REVENUE AND AGE",
+    "type": "chart/bar"
+}

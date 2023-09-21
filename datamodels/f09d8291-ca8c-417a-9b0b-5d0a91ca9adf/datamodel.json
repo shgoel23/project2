@@ -1,0 +1,26 @@
+{
+    "buildDestination": {
+        "destination": "elasticube"
+    },
+    "datasets": [
+        "./ada7219c-d78e-44cd-80fc-a32705c16e14/dataset.json"
+    ],
+    "experiments": {
+    },
+    "fiscal": "system",
+    "lastSuccessfulManualBuildStartTime": "2021-04-22T08:52:26.644Z",
+    "modelStatistics": {
+        "enableModelStatistics": false,
+        "maxTablesPerCollection": 0,
+        "recollectStatsInterval": 0
+    },
+    "oid": "f09d8291-ca8c-417a-9b0b-5d0a91ca9adf",
+    "relationType": "regular",
+    "relations": "./relations.json",
+    "relationsTables": [
+    ],
+    "schemaId": null,
+    "shouldUpdateScheduleOnManualBuild": null,
+    "title": "Sample Lead Generation",
+    "type": "extract"
+}

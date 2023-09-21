@@ -1,0 +1,390 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c0e7ec9ad69002a989f4f",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "localhost/Sample ECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "live": false,
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendBreakByValueFilter": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "lastOpened": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "activeHierarchy": {
+                            "_id": "calendar",
+                            "title": "Calendar Hierarchy"
+                        },
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[Commerce.Date (Calendar)]",
+                            "index": 3,
+                            "level": "days",
+                            "table": "Commerce",
+                            "title": "Days in Date"
+                        },
+                        "parent": {
+                            "activeHierarchy": {
+                                "_id": "calendar",
+                                "title": "Calendar Hierarchy"
+                            },
+                            "format": {
+                                "mask": {
+                                    "dateAndTime": "MM/dd/y HH:mm",
+                                    "days": "shortDate",
+                                    "isdefault": true,
+                                    "minutes": "HH:mm",
+                                    "months": "MM/yyyy",
+                                    "quarters": "yyyy Q",
+                                    "weeks": "ww yyyy",
+                                    "years": "yyyy"
+                                }
+                            },
+                            "hierarchies": [
+                                "calendar",
+                                "calendar - weeks"
+                            ],
+                            "jaql": {
+                                "column": "Date",
+                                "datatype": "datetime",
+                                "dim": "[Commerce.Date (Calendar)]",
+                                "index": 2,
+                                "level": "months",
+                                "table": "Commerce",
+                                "title": "Months in Date"
+                            },
+                            "panel": "rows",
+                            "parent": {
+                                "format": {
+                                    "mask": {
+                                        "dateAndTime": "MM/dd/y HH:mm",
+                                        "days": "shortDate",
+                                        "isdefault": true,
+                                        "minutes": "HH:mm",
+                                        "months": "MM/yyyy",
+                                        "quarters": "yyyy Q",
+                                        "weeks": "ww yyyy",
+                                        "years": "yyyy"
+                                    }
+                                },
+                                "hierarchies": [
+                                    "calendar",
+                                    "calendar - weeks"
+                                ],
+                                "jaql": {
+                                    "column": "Date",
+                                    "datatype": "datetime",
+                                    "dim": "[Commerce.Date (Calendar)]",
+                                    "index": 1,
+                                    "level": "quarters",
+                                    "table": "Commerce",
+                                    "title": "Quarters in Date"
+                                },
+                                "parent": {
+                                    "format": {
+                                        "mask": {
+                                            "dateAndTime": "MM/dd/y HH:mm",
+                                            "days": "shortDate",
+                                            "isdefault": true,
+                                            "minutes": "HH:mm",
+                                            "months": "MM/yyyy",
+                                            "quarters": "yyyy Q",
+                                            "weeks": "ww yyyy",
+                                            "years": "yyyy"
+                                        }
+                                    },
+                                    "hierarchies": [
+                                        "calendar",
+                                        "calendar - weeks"
+                                    ],
+                                    "instanceid": "B154D-877A-14",
+                                    "jaql": {
+                                        "column": "Date",
+                                        "datatype": "datetime",
+                                        "dim": "[Commerce.Date (Calendar)]",
+                                        "level": "years",
+                                        "merged": true,
+                                        "table": "Commerce",
+                                        "title": "Years in Date"
+                                    },
+                                    "panel": "rows",
+                                    "wpanel": "xAxis"
+                                },
+                                "through": {
+                                    "jaql": {
+                                        "column": "Date",
+                                        "datatype": "datetime",
+                                        "dim": "[Commerce.Date (Calendar)]",
+                                        "filter": {
+                                            "explicit": true,
+                                            "members": [
+                                                "2012-01-01T00:00:00"
+                                            ],
+                                            "multiSelection": true
+                                        },
+                                        "level": "years",
+                                        "table": "Commerce",
+                                        "title": "Years in Date"
+                                    }
+                                }
+                            },
+                            "through": {
+                                "jaql": {
+                                    "column": "Date",
+                                    "datatype": "datetime",
+                                    "dim": "[Commerce.Date (Calendar)]",
+                                    "index": 1,
+                                    "level": "quarters",
+                                    "table": "Commerce",
+                                    "title": "Quarters in Date"
+                                }
+                            }
+                        },
+                        "through": {
+                            "jaql": {
+                                "column": "Date",
+                                "datatype": "datetime",
+                                "dim": "[Commerce.Date (Calendar)]",
+                                "filter": {
+                                    "explicit": true,
+                                    "members": [
+                                        "2012-06-01T00:00:00"
+                                    ],
+                                    "multiSelection": true
+                                },
+                                "level": "months",
+                                "table": "Commerce",
+                                "title": "Months in Date"
+                            }
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "90C87-D112-60",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Cost",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Cost]",
+                            "table": "Commerce",
+                            "title": "Total Cost"
+                        },
+                        "panel": "measures",
+                        "wpanel": "series"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "650c0eb7c9ad69002a989f51",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "days_in_date",
+                    "plural": "Days in Date",
+                    "singular": "Days in Date",
+                    "title": "Days in Date"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "",
+    "type": "chart/column"
+}

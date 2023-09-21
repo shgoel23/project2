@@ -1,0 +1,202 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c93fc5de1aa002afe24cf",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "lastOpened": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Brand ID",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Brand ID]",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "# of unique Brand ID"
+                        }
+                    }
+                ],
+                "name": "value"
+            },
+            {
+                "items": [
+                ],
+                "name": "secondary"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "formula": "0",
+                            "title": "0 (default)"
+                        }
+                    }
+                ],
+                "name": "min"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": false,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "context": {
+                            },
+                            "formula": "2500",
+                            "title": "2500",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "max"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "650c93fc5de1aa002afe24d0",
+    "options": {
+        "allowSelector": false,
+        "dashboardFiltersMode": "filter",
+        "disallowSelector": true,
+        "noTitle": false,
+        "selector": false,
+        "title": false,
+        "triggersDomready": true
+    },
+    "size": "big",
+    "style": {
+        "components": {
+            "labels": {
+                "enabled": true,
+                "inactive": false
+            },
+            "secondaryTitle": {
+                "enabled": true,
+                "inactive": true
+            },
+            "ticks": {
+                "enabled": true,
+                "inactive": false
+            },
+            "title": {
+                "enabled": false,
+                "inactive": false
+            }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "simple"
+        },
+        "indicator/pictogram": {
+        },
+        "skin": "1",
+        "subtype": "round"
+    },
+    "subtype": "indicator/gauge",
+    "title": "TOTAL BRANDS",
+    "type": "indicator"
+}

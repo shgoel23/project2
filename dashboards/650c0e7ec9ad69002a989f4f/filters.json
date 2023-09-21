@@ -1,0 +1,43 @@
+{
+    "filters": [
+        {
+            "disabled": false,
+            "instanceid": "0F464-88EB-14",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Date",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aSampleIAAaECommerce",
+                    "fullname": "localhost/Sample ECommerce",
+                    "id": "localhost_aSampleIAAaECommerce",
+                    "live": false,
+                    "title": "Sample ECommerce"
+                },
+                "datatype": "datetime",
+                "dim": "[Commerce.Date (Calendar)]",
+                "filter": {
+                    "explicit": true,
+                    "members": [
+                        "2012-05-28T00:00:00",
+                        "2012-05-29T00:00:00",
+                        "2012-05-30T00:00:00",
+                        "2012-06-02T00:00:00",
+                        "2012-06-03T00:00:00",
+                        "2012-06-04T00:00:00",
+                        "2012-06-05T00:00:00"
+                    ],
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "level": "days",
+                "locale": "en-us",
+                "merged": true,
+                "table": "Commerce",
+                "title": "Days in Date"
+            }
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "Country",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Country",
+            "oid": "0288ad8a-83f9-4cea-87b9-e59939cb057d",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "City",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "City",
+            "oid": "f5be3eee-65d4-4755-add3-323cae4326fa",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Referral Page",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Referral Page",
+            "oid": "c142424b-7ee7-4ceb-abdb-0a529ba75454",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Landing Page",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Landing Page",
+            "oid": "225ddcab-068c-4d16-bfca-e3550e281cae",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Source",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Source",
+            "oid": "c92f1ce0-e536-4141-9901-b314809cc3b4",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Date",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "Date",
+            "oid": "4498c854-e644-467f-9451-e05652a76a1f",
+            "precision": 0,
+            "scale": 0,
+            "size": 8,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "# Visits",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "# Visits",
+            "oid": "87731448-7715-4fa3-a6ed-6b9c36b53600",
+            "precision": 15,
+            "scale": 5,
+            "size": 9,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "# Converted",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "# Converted",
+            "oid": "aec8589f-3375-4a09-96b8-c6078686ae9d",
+            "precision": 15,
+            "scale": 16,
+            "size": 9,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "Marketing Qualified",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Marketing Qualified",
+            "oid": "fd00682f-0ed3-43af-9da3-4cfe22e6ed3d",
+            "precision": 0,
+            "scale": 0,
+            "size": 65536,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "# Conversion Rate",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "# Conversion Rate",
+            "oid": "51a9efb8-f4bf-438d-99ca-fbd30bd83b47",
+            "precision": 15,
+            "scale": 16,
+            "size": 9,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "Cost",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "Cost",
+            "oid": "fb987fa7-39a6-4499-958d-b84388e7ae49",
+            "precision": 15,
+            "scale": 16,
+            "size": 9,
+            "type": 5
+        },
+        {
+            "hidden": false,
+            "id": "Flow Status",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Flow Status",
+            "oid": "95eedc2b-0b95-4290-ba1c-d8ea0129a445",
+            "precision": 0,
+            "scale": 0,
+            "size": 18,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "Table": "Lead Generation.csv",
+        "delimiter": ",",
+        "hasHeader": true,
+        "ignoreFirstRows": 0,
+        "ignoreLastRows": 0,
+        "stringQuote": "\""
+    },
+    "dataset": "ada7219c-d78e-44cd-80fc-a32705c16e14",
+    "hidden": false,
+    "id": "Lead Generation.csv",
+    "isMaterialized": false,
+    "name": "Lead Generation",
+    "oid": "87ce80a5-b7c9-4419-8f54-c56dc7d4448d",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "87731448-7715-4fa3-a6ed-6b9c36b53600",
+                "type": 5
+            },
+            "type": "change-data-type"
+        }
+    ],
+    "type": "base"
+}

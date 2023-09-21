@@ -1,0 +1,11 @@
+{
+    "connection": "./connection.json",
+    "database": "",
+    "elasticube": "f09d8291-ca8c-417a-9b0b-5d0a91ca9adf",
+    "oid": "ada7219c-d78e-44cd-80fc-a32705c16e14",
+    "schemaName": "CSVFile",
+    "tables": [
+        "./87ce80a5-b7c9-4419-8f54-c56dc7d4448d/table.json"
+    ],
+    "type": "extract"
+}

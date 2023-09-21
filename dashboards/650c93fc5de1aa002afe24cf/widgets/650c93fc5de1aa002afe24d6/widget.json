@@ -1,0 +1,280 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c93fc5de1aa002afe24cf",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "lastOpened": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Quantity",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Quantity]",
+                            "table": "Commerce",
+                            "title": "Total Quantity"
+                        }
+                    }
+                ],
+                "name": "y-axis"
+            },
+            {
+                "items": [
+                    {
+                        "jaql": {
+                            "column": "Category",
+                            "datatype": "text",
+                            "dim": "[Category.Category]",
+                            "merged": true,
+                            "table": "category",
+                            "title": "Category"
+                        }
+                    }
+                ],
+                "name": "point"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                        },
+                        "jaql": {
+                            "column": "Gender",
+                            "datatype": "text",
+                            "dim": "[Commerce.Gender]",
+                            "merged": true,
+                            "table": "Commerce",
+                            "title": "Gender"
+                        }
+                    }
+                ],
+                "name": "Break By / Color"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Cost",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Cost]",
+                            "table": "Commerce",
+                            "title": "Total Cost"
+                        }
+                    }
+                ],
+                "name": "size"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "isdefault": true
+                            }
+                        },
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "Gender",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaECommerce",
+                                "fullname": "LocalHost/Sample ECommerce",
+                                "id": "localhost_aSampleIAAaECommerce",
+                                "title": "Sample ECommerce"
+                            },
+                            "datatype": "text",
+                            "dim": "[Commerce.Gender]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "Unspecified"
+                                    ]
+                                },
+                                "explicit": false,
+                                "multiSelection": true
+                            },
+                            "title": "Gender"
+                        }
+                    },
+                    {
+                        "format": {
+                            "mask": {
+                                "isdefault": true
+                            }
+                        },
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Category",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aSampleIAAaECommerce",
+                                "fullname": "LocalHost/Sample ECommerce",
+                                "id": "localhost_aSampleIAAaECommerce",
+                                "title": "Sample ECommerce"
+                            },
+                            "datatype": "text",
+                            "dim": "[Category.Category]",
+                            "filter": {
+                                "by": {
+                                    "agg": "sum",
+                                    "column": "Revenue",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Revenue]",
+                                    "title": "Total Revenue"
+                                },
+                                "top": 10
+                            },
+                            "title": "Category"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ]
+    },
+    "oid": "650c93fc5de1aa002afe24d6",
+    "options": {
+        "dashboardFiltersMode": "select",
+        "selector": false,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacityX": 500,
+            "categoriesCapacityY": 500,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "right"
+        },
+        "markerSize": {
+            "defaultSize": 10,
+            "highest": 60,
+            "isRange": true,
+            "lowest": 10,
+            "max": 48,
+            "min": 12,
+            "step": 1
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": true,
+            "logarithmicOld": true,
+            "ticks": true,
+            "title": {
+                "enabled": false,
+                "text": "SALES"
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": true,
+            "logarithmicOld": true,
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "QUANTITY"
+            }
+        }
+    },
+    "subtype": "bubble/scatter",
+    "title": "TOP CATEGORIES BY REVENUE, UNITS SOLD AND GENDER",
+    "type": "chart/scatter"
+}

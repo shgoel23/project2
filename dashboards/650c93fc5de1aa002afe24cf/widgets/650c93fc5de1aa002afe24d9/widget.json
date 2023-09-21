@@ -1,0 +1,222 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c93fc5de1aa002afe24cf",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "fullname": "LocalHost/Sample ECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "lastOpened": null,
+    "lastWidgetQueryGuid": "569B1-793A-0DB3-BB7B-34E0-2DEF-8D40-5408-9",
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "BDF33-34A9-8E",
+                        "jaql": {
+                            "context": {
+                                "[92c3c617-7835-49b8-a8c6-6f0cb7d54b6b]": {
+                                    "agg": "sum",
+                                    "column": "Revenue",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Revenue]",
+                                    "table": "Commerce",
+                                    "title": "Total Revenue"
+                                }
+                            },
+                            "formula": "[92c3c617-7835-49b8-a8c6-6f0cb7d54b6b]",
+                            "title": "Total Revenue",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "C83A5-D62B-3F",
+                        "jaql": {
+                            "context": {
+                                "[195945b0-65ad-4670-ac28-51a24c861fe3]": {
+                                    "agg": "sum",
+                                    "column": "Quantity",
+                                    "datatype": "numeric",
+                                    "dim": "[Commerce.Quantity]",
+                                    "table": "Commerce",
+                                    "title": "Total Quantity"
+                                }
+                            },
+                            "formula": "[195945b0-65ad-4670-ac28-51a24c861fe3]",
+                            "title": "Total Quantity",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "y-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "instanceid": "C7E84-5BF3-7A",
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[Commerce.Date]",
+                            "firstday": "mon",
+                            "format": {
+                                "mask": {
+                                    "days": "shortDate",
+                                    "isdefault": true,
+                                    "minutes": "HH:mm",
+                                    "months": "MM/yyyy",
+                                    "quarters": "yyyy Q",
+                                    "weeks": "ww yyyy",
+                                    "years": "yyyy"
+                                }
+                            },
+                            "level": "months",
+                            "table": "Commerce",
+                            "title": "Date"
+                        }
+                    }
+                ],
+                "name": "point"
+            },
+            {
+                "items": [
+                ],
+                "name": "Break By / Color"
+            },
+            {
+                "items": [
+                ],
+                "name": "size"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "650c93fc5de1aa002afe24d9",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacityX": 500,
+            "categoriesCapacityY": 500,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "markerSize": {
+            "defaultSize": 10,
+            "highest": 60,
+            "isRange": false,
+            "lowest": 10,
+            "max": 48,
+            "min": 12,
+            "step": 1
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "bubble/scatter",
+    "title": "",
+    "type": "chart/scatter"
+}

@@ -1,0 +1,259 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "650c93fc5de1aa002afe24cf",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aSampleIAAaECommerce",
+        "id": "localhost_aSampleIAAaECommerce",
+        "title": "Sample ECommerce"
+    },
+    "desc": null,
+    "lastOpened": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "days": "shortDate",
+                                "months": "M-yy",
+                                "quarters": "yyyy Q",
+                                "years": "yyyy"
+                            }
+                        },
+                        "jaql": {
+                            "column": "Date",
+                            "datatype": "datetime",
+                            "dim": "[Commerce.Date (Calendar)]",
+                            "index": 1,
+                            "level": "days",
+                            "table": "Commerce",
+                            "title": "Days in Date"
+                        },
+                        "parent": {
+                            "format": {
+                                "mask": {
+                                    "days": "shortDate",
+                                    "months": "M-yy",
+                                    "quarters": "yyyy Q",
+                                    "years": "yyyy"
+                                }
+                            },
+                            "instanceid": "07375-6D12-B2",
+                            "jaql": {
+                                "column": "Date",
+                                "datatype": "datetime",
+                                "dim": "[Commerce.Date (Calendar)]",
+                                "level": "months",
+                                "merged": true,
+                                "table": "Commerce",
+                                "title": "Months in Date"
+                            },
+                            "panel": "rows"
+                        },
+                        "through": {
+                            "jaql": {
+                                "column": "Date",
+                                "datatype": "datetime",
+                                "dim": "[Commerce.Date (Calendar)]",
+                                "filter": {
+                                    "explicit": true,
+                                    "members": [
+                                    ],
+                                    "multiSelection": true
+                                },
+                                "level": "months",
+                                "table": "Commerce",
+                                "title": "Months in Date"
+                            }
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 0,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "B555D-267E-EC",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Revenue",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Revenue]",
+                            "table": "Commerce",
+                            "title": "Total Revenue"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "colorIndex": 1,
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "276F1-34FB-57",
+                        "jaql": {
+                            "agg": "sum",
+                            "column": "Quantity",
+                            "datatype": "numeric",
+                            "dim": "[Commerce.Quantity]",
+                            "table": "Commerce",
+                            "title": "Total Quantity"
+                        },
+                        "panel": "measures",
+                        "singleSeriesType": "column",
+                        "y2": true
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "650c93fc5de1aa002afe24d7",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": true,
+            "fill": "hollow",
+            "size": "small"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false,
+                "text": "MONTH"
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": false,
+            "intervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "templateMainYHasGridLines": true,
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "QUANTITY"
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "intervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": true,
+            "min": "",
+            "ticks": true,
+            "title": {
+                "enabled": true,
+                "text": "SALES"
+            }
+        }
+    },
+    "subtype": "line/spline",
+    "title": "REVENUE vs.UNITS SOLD",
+    "type": "chart/line"
+}
